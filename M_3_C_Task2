@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main()
+{
+    float fWeight = 0;
+    int iCups = 0;
+
+    printf("Hello!\nPlease enter how many ounces would you like:\n");
+    scanf("%f", &fWeight);
+    if (fWeight > 0) 
+    {
+        if (fWeight < 8)
+        {
+        printf("You get 1 cup with %f ounce(s)\n", fWeight);
+        }
+        else
+        {
+        iCups = fWeight / 8;
+        fWeight = (fWeight - (iCups * 8)) / 8;
+            if (fWeight > 0)
+            {
+            printf("You get %d cups", iCups + 1);
+            }   
+            else 
+            printf("You get %d cup(s)", iCups);
+        }
+    }
+    else
+    {
+        do
+        {
+        printf("Please enter a *positive* number:\n");
+        scanf("%f", &fWeight);
+        } while (fWeight < 0);
+        if (fWeight < 8)
+        {
+        printf("You get 1 cup with %f ounce(s)\n", fWeight);
+        }
+        else
+        {
+        iCups = fWeight / 8;
+        fWeight = (fWeight - (iCups * 8)) / 8;
+            if (fWeight = 0)
+            {
+            printf("You get %d cups", iCups + 1);
+            }   
+            else 
+            printf("You get %d cup(s)", iCups);
+        }
+    }
+return 0;
+}
