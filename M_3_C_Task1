@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+   float fWeight = 0;
+   printf("Hello!\nPlease enter your weight in kg (XX.XXX)\n");
+   scanf("%f", &fWeight);
+   if (fWeight > 0)
+   {
+        fWeight = fWeight*17/100;
+        printf("Your weight on the Moons is %f kg\n", fWeight);
+   } else 
+   { 
+       do
+       {
+          printf("Please enter a positive number\n");
+          scanf("%f", &fWeight);
+       } while (fWeight < 0);
+       fWeight = fWeight*17/100;
+       printf("Your weight on the Moons is %f kg\n", fWeight);
+   }    
+   return 0;
+}
