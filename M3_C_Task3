@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+float fyears = 0;
+float iDays = 0;
+
+printf("Hello!\nPlease enter how many Earth days you want to convert:\n");
+scanf("%f", &iDays);
+if (iDays>0)
+{
+fyears = iDays/4380;
+printf("%.0f Earth day(s) are %.10f Jupiter Year(s)", iDays, fyears);
+}
+else
+{
+    do
+    {
+    printf("Please enter a *positive* number:\n");
+    scanf("%f", &iDays);
+    } while (iDays < 0);
+    fyears = iDays/4380;
+    printf("%.0f Earth day(s) are %.10f Jupiter Year(s)", iDays, fyears);
+}
+return 0;
+}
