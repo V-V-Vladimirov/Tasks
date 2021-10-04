@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+int main ()
+{
+char x = 8; //Initialize x=8
+x = x -2;  // x=6
+x= x+ 6;  // x=12
+x= x - 10 + 2; // x= 4
+printf("\nResult: %i", x);
+}
