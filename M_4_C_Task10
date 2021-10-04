@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main ()
+{
+  unsigned int ucCountTrailer, ucCountCamper = 3; 
+  unsigned int ucChoise = 0, ucDays = 0;
+  unsigned int ucRentTrailer = 90, ucRentCamper = 100;
+  int iPrice = 0;
+
+  printf("\nWould you like to rent:\n Press 1 for Trailer\n Press 2 for Camper\n");
+  scanf("%d", &ucChoise);
+  printf("How many days would you like to rent for: ");
+  scanf("%d", &ucDays);
+  if (ucChoise==1) printf("You will pay %d lv. for trailer", ucDays*ucRentTrailer);
+  else if (ucChoise==2) printf("You will pay %d lv. for camper", ucDays*ucRentCamper);
+  else printf("Invalid choise");
+  return 0;
+
+}
