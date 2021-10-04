@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() 
+{
+   int sec =1;
+   unsigned int hours, days, year = 0;
+
+   hours = 3600*sec;
+   printf("Seconds in hour = %i\n", hours);
+   days = 24*hours;
+   printf("Seconds in day = %i\n", days);
+   year = 365*days;
+   printf("Seconds in year = %i\n", year);
+return 0;
+}
