@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int num, n, value, result = 0, Mask = 1;
+
+int bitAt(num, n)
+{
+    /*printf("Enter any number: ");
+    scanf("%d", &num);
+
+    printf("Enter nth bit to check (0-31): ");
+    scanf("%d", &n);*/
+
+    int bitStatus = (num >> n) & 1;
+
+    printf("The %d bit is set to %d", n, bitStatus);
+
+    return bitStatus;
+}
+
+int clearBit(num, n)
+{
+    /*printf("Enter any number: ");
+    scanf("%d", &num);
+
+    printf("Enter nth bit to set to 0 ");
+    scanf("%d", &n);*/
+
+    Mask = ~(1 << n);
+    result = num&Mask;
+    printf("The result number is %d", result);
+
+    return result;
+}
+int setBit(num, n)
+{
+    /*printf("Enter any number: ");
+    scanf("%d", &num);
+
+    printf("Enter nth bit to set to 1 ");
+    scanf("%d", &n);*/
+
+    Mask = (1 << n);
+    result = num|Mask;
+    printf("The result number is %d", result);
+
+    return result;
+}
+int reversetBit(num, n)
+{
+    /*printf("Enter any number: ");
+    scanf("%d", &num);
+
+    printf("Enter nth bit to reverse ");
+    scanf("%d", &n);*/
+
+    Mask = (1 << n);
+    result = num^Mask;
+    printf("The result number is %d", result);
+
+    return result;
+}
+int main()
+{
+    printf("Enter any number: ");
+    scanf("%d", &num);
+
+    printf("Enter nth bit to change: ");
+    scanf("%d", &n);
+
+    printf("Enter the new bit value (0 or 1): ");
+    scanf("%d", &value);
+    if (value==1) setBit(num, n);
+    if (value==0) clearBit(num, n);
+    return 0;
+}
