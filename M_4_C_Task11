@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main ()
+{
+   float price = 0;
+   float fweightF, fweightT, fweightCa = 0;
+   int icIcecream, icpopcicles, icYogurt = 0;
+   float ftomatoes = 4.5;
+   float fflour = 1.8;
+   float fyougurt = 0.5;
+   float fcandy = 1.5;
+   float fIceream = 0.60;
+   float fpopcicles = 0.15;
+
+   printf("Hello! We offer Tomatoes, Flour, Yougurt, Candy, Icecream and Popsicles.\n");
+   printf("How much tomatoes would you like? (kg)\n");   
+   scanf("%f",&fweightT);   
+   price = ftomatoes*fweightT;
+   printf("How much flour would you like? (kg)\n");   
+   scanf("%f",&fweightF);   
+   price = price+(fflour*fweightF);
+   printf("How many yougurt boxes would you like? (pc)\n");   
+   scanf("%d",&icYogurt);   
+   price = price+(fyougurt*icYogurt);
+   printf("How much candy would you like? (kg)\n");   
+   scanf("%f",&fweightCa);   
+   price = price+(fcandy*fweightCa);
+   printf("How many icecream cones would you like? (pc)\n");   
+   scanf("%d",&icIcecream);   
+   price = price+(icIcecream*fIceream);
+   printf("How much popcicles would you like? (pc)\n");   
+   scanf("%d",&icpopcicles);   
+   price = price+(icpopcicles*fpopcicles);
+   printf("Total %.3f lv.\n", price);
+   printf("Tomatoes %.3f *%.2flv.\n", fweightT, ftomatoes);
+   printf("Flour %.3f *%.2flv.\n", fweightF, fflour);
+   printf("Yougurt %d *%.2flv.\n", icYogurt, fyougurt);
+   printf("Candy %.3f *%.2flv.\n", fweightCa, fcandy);
+   printf("Iceream %d *%.2flv.\n", icIcecream, fIceream);
+   printf("Popsicles %d *%.2flv.\n", icpopcicles, fpopcicles);
+    return 0;    
+}
