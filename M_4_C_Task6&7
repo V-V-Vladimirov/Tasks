@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main ()
+{
+  char cValue1 = -127;
+  unsigned char ucValue2 = 255;
+  unsigned int uiValue3 = 63498;
+  int uiValue4 = 4294967292;
+  long long int lliValue5 = -9000000000000775845;
+  unsigned int uiValue6 = 24212;
+  int iValue7 = -1357674;
+  int iValue8 = 1357674;
+  int iValue9 = 1357674000;
+  long long int lliValue10 = 3657895000;
+  printf ("\nTask 6: %i, %i, %i, %lli, %lli\nTask 7: %i, %i, %i, %i, %lli", cValue1, ucValue2, uiValue3, uiValue4, lliValue5, uiValue6, iValue7, iValue8, iValue9, lliValue10);
+  return 0;
+}
