@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+
+int main ()
+{
+  double dvalue1 = 4.9876543;
+  char cvalue2[30] = "7.123456789012345678890";
+  char cvalue3[25] = "18398458438583853.28";
+  char cvalue4[60] = "18398458438583853.39875937284928422";
+  
+     
+  printf ("\n %.7f\n%s\n%s\n%s\n", dvalue1, cvalue2, cvalue3, cvalue4);
+  
+  return 0;
+}
