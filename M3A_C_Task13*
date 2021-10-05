@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1, num2, n, result = 0, bitStatus2, bitStatus1 = 0;
+
+    printf("Enter first number to compare: ");
+    scanf("%d", &num1);
+    printf("Enter second number to compare: ");
+    scanf("%d", &num2);
+    for (n=-1; n<31; n+=1)
+    {
+        bitStatus1 = (num1 >> n) & 1;
+        bitStatus2 = (num2 >> n) & 1;
+        if (bitStatus1 !=  bitStatus2)
+        {
+            result+=1;
+        }      
+    }
+    printf("The different bits are: %d", result);
+
+    return 0;
+}
