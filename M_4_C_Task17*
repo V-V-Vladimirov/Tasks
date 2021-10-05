@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int bitAt(int num, int n);
+int main()
+{
+    int num, n, result = 0;
+
+    printf("Enter any number: ");
+    scanf("%d", &num);
+    for (n==-1; n<31; n+=1)
+    {
+        if ((bitAt(num, n)==0) && (bitAt(num, n+1)==1) && (bitAt(num, n+2)==0))
+        {
+            result+=1;
+        }
+    }
+    printf("The number of sequences '010' is: %d", result);
+
+    return 0;
+}
+int bitAt(int num, int n)
+{
+     int bitStatus = (num >> n) & 1;
+     return bitStatus;
+}
