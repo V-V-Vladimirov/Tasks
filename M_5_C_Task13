@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+
+int main ()
+{
+  char str[] = "HELLO";
+  unsigned int i = 0;
+  while (i<strlen(str)) 
+  {
+      str[i]=(str[i])+32; //transforms Capital to small letters according to the ASCII
+      i++;
+  }
+  printf("%s", str);
+  return 0;
+}
