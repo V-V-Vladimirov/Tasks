@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+unsigned int uicounter = 0;
+void test();
+
+int main ()
+{
+  test();
+  test();
+  test();
+  printf("Result %d", uicounter);
+  return 0;
+}
+
+void test()
+{
+    uicounter+=1;
+    return;
+}
