@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-int num, n, value, result = 0, Mask = 1;
-
-int bitAt(num, n)
+int bitAt(int num, int n)
 {
     int bitStatus = (num >> n) & 1;
 
@@ -11,32 +9,30 @@ int bitAt(num, n)
     return bitStatus;
 }
 
-int clearBit(num, n)
+int clearBit(int num, int n, int Mask)
 {
     Mask = ~(1 << n);
-    result = num&Mask;
-    printf("The result number is %d", result);
+    printf("The result number is %d", num&Mask);
 
-    return result;
+    return num&Mask;
 }
-int setBit(num, n)
+int setBit(int num, int n, int Mask)
 {
     Mask = (1 << n);
-    result = num|Mask;
-    printf("The result number is %d", result);
+    printf("The result number is %d", num|Mask);
 
-    return result;
+    return num|Mask;
 }
-int reversetBit(num, n)
+int reversetBit(int num, int n, int Mask)
 {
     Mask = (1 << n);
-    result = num^Mask;
-    printf("The result number is %d", result);
+    printf("The result number is %d", num^Mask);
 
-    return result;
+    return num^Mask;
 }
 int main()
 {
+    int num, n, value, Mask = 1;
     printf("Enter any number: ");
     scanf("%d", &num);
 
@@ -45,7 +41,7 @@ int main()
 
     printf("Enter the new bit value (0 or 1): ");
     scanf("%d", &value);
-    if (value==1) setBit(num, n);
-    if (value==0) clearBit(num, n);
+    if (value==1) setBit(num, n, Mask);
+    if (value==0) clearBit(num, n, Mask);
     return 0;
 }
