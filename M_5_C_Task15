@@ -4,16 +4,15 @@ int test();
 
 int main ()
 {
-  test();
-  test();
-  test();
-  printf("Result %d", test());
+  test(); // 1st time the function is called
+  test(); // 2nd time the function is called
+  printf("Result %d", test()); // 3d time the function is called, inside of another
   return 0;
 }
 
 int test()
 {
-  static int count = 0;
-  count++;
-  return count;
+  static int icount = 0;
+  icount++;
+  return icount;
 }
