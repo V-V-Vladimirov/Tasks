@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main ()
+{
+char a[] = {0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, '\0'};
+
+printf("Result in double is %lf\n", a);
+printf("Result in signed long long is %lld\n", a);
+printf("Result in unsigned long long is %llu\n", a);
+
+return 0;
+}
