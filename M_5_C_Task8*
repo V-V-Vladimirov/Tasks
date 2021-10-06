@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main ()
+{
+   char s[] = "Hi";
+   int i = 0;
+   while (i < (strlen(s)))
+   {
+      printf("%c\n", s[i]);
+      i+=1;
+   }
+   printf("String lenght is %d", i);
+return 0;
+}
