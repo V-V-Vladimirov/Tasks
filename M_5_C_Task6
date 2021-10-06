@@ -2,8 +2,7 @@
 
 int main ()
 {
-unsigned char a[] = {0xAA, 0xAA, 0xAA, 0xAA, '\0'};
-int i = 0;
+char a[] = {0xAA, 0xAA, 0xAA, 0xAA, '\0'};
 
 printf("Result in float is %f\n", a);
 printf("Result in signed int is %d\n", a);
